@@ -1,4 +1,4 @@
-name: Publish to npm
+name: Publish to GitHub Packages
 
 on:
   release:
@@ -6,20 +6,21 @@ on:
 
 jobs:
   publish:
-    name: Publish @casaconomy/adapter-oz-local
+    name: Publish @abernerus/adapter-oz-local
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      id-token: write
+      packages: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-          registry-url: 'https://registry.npmjs.org'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@abernerus'
           cache: 'npm'
       - run: npm ci
       - run: npm run build
-      - run: npm publish --access public
+      - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

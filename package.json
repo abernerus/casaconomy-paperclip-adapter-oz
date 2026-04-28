@@ -1,9 +1,16 @@
 {
-  "name": "@casaconomy/adapter-oz-local",
+  "name": "@abernerus/adapter-oz-local",
   "version": "0.1.0",
   "description": "Paperclip adapter for Oz (Warp) — run Paperclip agents on the Oz CLI",
   "license": "MIT",
   "type": "module",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abernerus/casaconomy-paperclip-adapter-oz.git"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
