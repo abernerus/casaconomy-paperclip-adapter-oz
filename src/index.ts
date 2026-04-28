@@ -139,7 +139,7 @@ export function createServerAdapter(): ServerAdapterModule {
     listSkills: listOzSkills,
     syncSkills: syncOzSkills,
     getConfigSchema,
-    supportsLocalAgentJwt: false,
+    supportsLocalAgentJwt: true,
     supportsInstructionsBundle: true,
     requiresMaterializedRuntimeSkills: false,
     agentConfigurationDoc,

@@ -1,7 +1,7 @@
 {
   "name": "@abernerus/adapter-oz-local",
-  "version": "0.1.0",
-  "description": "Paperclip adapter for Oz (Warp) — run Paperclip agents on the Oz CLI",
+  "version": "0.1.1",
+  "description": "Paperclip adapter for Oz (Warp) \u2014 run Paperclip agents on the Oz CLI",
   "license": "MIT",
   "type": "module",
   "publishConfig": {
