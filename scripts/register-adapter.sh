@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# register-adapter.sh — register @casaconomy/adapter-oz-local in Paperclip's plugin store.
+# register-adapter.sh — register @abernerus/adapter-oz-local in Paperclip's plugin store.
 #
 # Writes to ~/.paperclip/adapter-plugins.json so the server discovers the
 # adapter on next startup. Idempotent — safe to re-run.
@@ -13,7 +13,7 @@
 set -euo pipefail
 
 ADAPTER_TYPE="oz_local"
-PACKAGE_NAME="@casaconomy/adapter-oz-local"
+PACKAGE_NAME="@abernerus/adapter-oz-local"
 ADAPTER_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 STORE_PATH="$HOME/.paperclip/adapter-plugins.json"
 
